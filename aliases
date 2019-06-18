@@ -1,0 +1,46 @@
+function git_current_branch() {
+  ref=$(git symbolic-ref HEAD)
+  echo "${ref#refs/heads/}"
+}
+
+# ls
+alias ls="ls -G"
+alias ll="ls -Gl"
+alias la="ls -Gla"
+alias ltr="ls -Gltr"
+abbrev-alias hg="history 0 | grep --color=auto "
+
+# git
+abbrev-alias gst='git status'
+abbrev-alias ga='git add -A'
+abbrev-alias gap='git add -p .'
+abbrev-alias gb='git branch'
+abbrev-alias gc='git commit'
+abbrev-alias gco='git checkout'
+abbrev-alias gr='git rebase'
+abbrev-alias grc='git rebase --continue'
+abbrev-alias gca='git commit --amend -C HEAD'
+abbrev-alias gd='git diff'
+abbrev-alias gp='git pull --rebase'
+abbrev-alias gpf='git push --force-with-lease'
+abbrev-alias gup='git fetch origin; git rebase origin/master'
+abbrev-alias ggpush='git push -u origin $(git_current_branch)'
+abbrev-alias undopush="git push -f origin HEAD^:master"
+abbrev-alias gloga='git log --format='\''%Cgreen%h%Creset %C(cyan)%an%Creset - %s - %C(yellow)%ar'\'' --graph'
+
+alias removemerged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias ohcrap='git add -A .; git commit --amend -C HEAD; git push -f'
+
+# npm
+abbrev-alias ns='npm start'
+abbrev-alias nt='npm test'
+abbrev-alias nr='npm run'
+abbrev-alias ni='npm install'
+abbrev-alias nid='npm install --save-dev'
+abbrev-alias nig='npm install --global'
+abbrev-alias nit='npm install && npm test'
+abbrev-alias nk='npm link'
+abbrev-alias nf='npm cache clean && rm -rf node_modules && npm install'
+abbrev-alias nlg='npm list --global --depth=0'
+
+alias wl="cd ~/code/wl"
