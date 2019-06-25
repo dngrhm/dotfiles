@@ -3,6 +3,7 @@
 # Plugins
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-abbrev-alias/abbrev-alias.plugin.zsh
+source ~/dotfiles/zsh/plugins/zsh-git-poooosh/zsh-git-poooosh.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
 
