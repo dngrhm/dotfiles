@@ -44,6 +44,12 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
-export PATH="$HOME/bin:$PATH"
+# flutter
+export PATH="$PATH:$HOME/bin/flutter/bin"
+
+# Golang
+export GOPATH='~/go'
+
+export PATH="$PATH:$HOME/bin"
 
 export EDITOR=emacs
