@@ -9,6 +9,11 @@ source ~/dotfiles/zsh/plugins/zsh-abbrev-alias/abbrev-alias.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-git-poooosh/zsh-git-poooosh.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
+# zsh brew completions
+if [[ -n ${DEBUG_TRACE} ]]; then echo "Brew Completions..."; fi
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 # nvm
 # https://github.com/nvm-sh/nvm
