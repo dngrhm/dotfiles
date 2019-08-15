@@ -6,9 +6,9 @@ function git_current_branch() {
 # ls
 if [[ -n ${DEBUG_TRACE} ]]; then echo "- ls"; fi
 alias ls='ls -G'
-alias ll='ls -Gl'
-alias la='ls -Gla'
-alias ltr='ls -Gltr'
+alias ll='ls -Glh'
+alias la='ls -Glah'
+alias ltr='ls -Gltrh'
 abbrev-alias hg='history 0 | grep --color=auto '
 
 # git
@@ -19,6 +19,7 @@ abbrev-alias ga='git add -A'
 abbrev-alias gap='git add -p .'
 abbrev-alias gb='git branch'
 abbrev-alias gc='git commit'
+abbrev-alias gcm='git commit -m'
 abbrev-alias gca='git commit --amend -C HEAD'
 abbrev-alias gco='git checkout'
 abbrev-alias gd='git diff'
@@ -31,6 +32,7 @@ abbrev-alias grc='git rebase --continue'
 abbrev-alias gra='git rebase --abort'
 if [[ -n ${DEBUG_TRACE} ]]; then echo "  - branch mgt"; fi
 abbrev-alias gf='git fetch'
+abbrev-alias gfa='git fetch --all'
 abbrev-alias gp='git push'
 abbrev-alias gl='git pull --rebase'
 abbrev-alias gpf='git push --force-with-lease'
