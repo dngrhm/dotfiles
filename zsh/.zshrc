@@ -1,13 +1,14 @@
 # .zshrc
 # Uncomment to show trace statements
 # export DEBUG_TRACE=1
+export DOTFILES_DIR="$HOME/dotfiles"
 
 # Plugins
 if [[ -n ${DEBUG_TRACE} ]]; then echo "Plugins..."; fi
-source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source ~/dotfiles/zsh/plugins/zsh-abbrev-alias/abbrev-alias.plugin.zsh
-source ~/dotfiles/zsh/plugins/zsh-git-poooosh/zsh-git-poooosh.plugin.zsh
-source ~/dotfiles/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source ${DOTFILES_DIR}/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ${DOTFILES_DIR}/zsh/plugins/zsh-abbrev-alias/abbrev-alias.plugin.zsh
+source ${DOTFILES_DIR}/zsh/plugins/zsh-git-poooosh/zsh-git-poooosh.plugin.zsh
+source ${DOTFILES_DIR}/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
 # zsh brew completions
 if [[ -n ${DEBUG_TRACE} ]]; then echo "Brew Completions..."; fi
@@ -21,6 +22,7 @@ if [[ -n ${DEBUG_TRACE} ]]; then echo "NVM..."; fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source ${DOTFILES_DIR}/zsh/plugins/zsh-autoload-nvmrc/zsh-autoload-nvmrc.plugin.zsh
 
 # zsh autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions
@@ -43,7 +45,7 @@ eval "$(rbenv init -)"
 
 # Aliases
 if [[ -n ${DEBUG_TRACE} ]]; then echo "Aliases..."; fi
-source ~/dotfiles/aliases
+source ${DOTFILES_DIR}/aliases
 
 #http://zsh.sourceforge.net/Doc/Release/Options.html
 SAVEHIST=2000
@@ -68,3 +70,4 @@ export GOPATH='~/go'
 export PATH="$PATH:$HOME/bin"
 
 export EDITOR=emacs
+export PATH="/usr/local/opt/mongodb-community@4.0/bin:$PATH"
