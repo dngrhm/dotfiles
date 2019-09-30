@@ -27,7 +27,7 @@ source ${DOTFILES_DIR}/zsh/plugins/zsh-autoload-nvmrc/zsh-autoload-nvmrc.plugin.
 # zsh autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions
 if [[ -n ${DEBUG_TRACE} ]]; then echo "autosuggestions..."; fi
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${DOTFILES_DIR}/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # pure prompt
 # https://github.com/sindresorhus/pure
