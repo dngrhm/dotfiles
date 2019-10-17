@@ -66,6 +66,9 @@ abbrev-alias dkcb='docker-compose build'
 abbrev-alias dkcu='docker-compose up'
 abbrev-alias dkcd='docker-compose down'
 abbrev-alias dkm='docker-machine'
+function dkmdo() {
+  docker-machine $@ --driver digitalocean --digitalocean-access-token $DO_API_KEY
+}
 
 # node
 if [[ -n ${DEBUG_TRACE} ]]; then echo "- node"; fi
