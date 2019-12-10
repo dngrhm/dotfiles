@@ -9,7 +9,7 @@ alias ls='ls -G'
 alias ll='ls -Glh'
 alias la='ls -Glah'
 alias ltr='ls -Gltrh'
-abbrev-alias hg='history 0 | grep --color=auto '
+abbrev-alias histg='history 0 | grep --color=auto '
 
 # git
 if [[ -n ${DEBUG_TRACE} ]]; then echo "- git"; fi
