@@ -83,6 +83,10 @@ abbrev-alias nk='npm link'
 abbrev-alias nf='npm cache clean && rm -rf node_modules && npm install'
 abbrev-alias nlg='npm list --global --depth=0'
 
+# tmux
+if [[ -n ${DEBUG_TRACE} ]]; then echo "- tmux"; fi
+alias mux=tmuxinator
+
 # ruby
 if [[ -n ${DEBUG_TRACE} ]]; then echo "- ruby"; fi
 abbrev-alias be='bundle exec'
